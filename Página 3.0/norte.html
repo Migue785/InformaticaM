@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viaje a Colombia</title>
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+          crossorigin="anonymous">
+    <style>
+      body {
+        width: 70%;
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 48% 2% 48%;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "Nav  Nav Nav" "elemento1 elemento1 elemento1" "caribe caribe caribe" "tit2 tit2 tit2"
+          "texto1 . texto2" "mar mar mar" "playas playas playas" "SantaMarta blanco Cartagena"
+          "playaMarta blanco playaCartagena" "toLinks toLinks toLinks" "hotel1 . hotel2" "isla . sanAndrés"
+          "fiestas fiestas fiestas" "fiestas2 fiestas2 fiestas2" "car1 . car2" "p2 p2 p2" "Barranquilla . Santa2" "lugares lugares lugares" "murallas . castillo" "flamencos flamencos flamencos" "final final final" "finNorte finNorte finNorte";
+      }
+      h1 {
+        color: gold;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 40px;
+        text-align: center;
+        margin: 18px;
+      }
+      h2 {
+        color: blue;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 28px;
+        background-color: yellow;
+        margin: 8px;
+      }
+      h3 {
+        color: black;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 21px;
+        padding: 5px;
+        background-color: orange;
+        margin: 8px;
+      }
+      p {
+        font-family: cursive;
+        font-size: 18px;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+      }
+      .Inicio {
+        font-family: cursive;
+        font-size: 18px;
+        list-style: none;
+        padding: 0px;
+        width: 90%;
+        margin: auto;
+        background-color: lightyellow;
+        border-radius: 10px;
+      }
+      .Inicio li a {
+        text-decoration: none;
+        color: black;
+        padding: 18px;
+        display: block;
+      }
+      .Inicio li {
+        display: inline-block;
+        text-align: center;
+      }
+      .Inicio li a:hover {
+        background-color: beige;
+        font-size: 22px;
+        padding: 14px;
+      }
+      .s {
+        list-style-type: square;
+      }
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        font-family: cursive;
+        text-align: center;
+      }
+      #Nav {
+        grid-area: Nav;
+      }
+      #elemento1 {
+        grid-area: elemento1;
+      }
+      #caribe {
+        grid-area: caribe;
+      }
+      #tit2 {
+        grid-area: tit2;
+        margin-top: 16px;
+      }
+      #texto1 {
+        grid-area: texto1;
+        margin-right: 25px;
+      }
+      #texto2 {
+        grid-area: texto2;
+        margin-left: 18px;
+      }
+      #mar {
+        grid-area: mar;
+      }
+      #playas {
+        grid-area: playas;
+        text-align: center;
+      }
+      #SantaMarta {
+        grid-area: SantaMarta;
+        margin-top: 60px;
+      }
+      #Cartagena {
+        grid-area: Cartagena;
+      }
+      #blanco {
+        grid-area: blanco;
+      }
+      #playaMarta {
+        grid-area: playaMarta;
+      }
+      #playaCartagena {
+        grid-area: playaCartagena;
+      }
+      #toLinks {
+        grid-area: toLinks;
+        text-align: center;
+      }
+      #hotel1 {
+        grid-area: hotel1;
+        text-align: center;
+        border: solid black;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #hotel2 {
+        grid-area: hotel2;
+        text-align: center;
+        border: solid black;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      #isla {
+        grid-area: isla;
+        font-size: 18px;
+        font-family: cursive;
+      }
+      #sanAndrés {
+        grid-area: sanAndrés;
+        text-align: center;
+      }
+      #fiestas {
+        grid-area: fiestas;
+      }
+      #fiestas2 {
+        grid-area: fiestas2;
+        text-align: center;
+      }
+      #car1 {
+        grid-area: car1;
+        margin-right: 25px;
+        text-align: justify;
+      }
+      #car2 {
+        grid-area: car2;
+        margin-left: 18px;
+        text-align: justify;
+      }
+      #p2 {
+        grid-area: p2;
+        text-align: center;
+        margin-top: 6px;
+      }
+      #Barranquilla {
+        grid-area: Barranquilla;
+      }
+      #Santa2 {
+        grid-area: Santa2;
+      }
+      #lugares {
+        grid-area: lugares;
+        text-align: center;
+        margin-top: 8px;
+      }
+      #murallas {
+        grid-area: murallas;
+        text-align: center;
+      }
+      #castillo {
+        grid-area: castillo;
+        text-align: center;
+      }
+      #flamencos {
+        grid-area: flamencos;
+        text-align: center;
+      }
+      #final {
+        grid-area: final;
+        text-align: center;
+      }
+      #finNorte {
+        grid-area: finNorte;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="Nav" class="Inicio">
+      <li
+        style="
+          padding-right: 10px;
+          padding-left: 40px;
+          font-size: 28px;
+          font-weight: 700;
+          font-family: 'Times New Roman', Times, serif;
+        "
+      >
+        Colombia
+      </li>
+      <li>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png"
+          alt="Colombia"
+          width="50px"
+          style="margin-top: 10px; border-radius: 10px"
+        />
+      </li>
+      <li style="float: right"><a href="index.html">Inicio</a></li>
+      <li style="padding-left: 75px"><a href="norte.html">Norte</a></li>
+      <li><a href="centro.html">Centro</a></li>
+      <li><a href="sur.html">Sur</a></li>
+    </ul>
+    <h1 id="elemento1">Bienvenido al norte de Colombia</h1>
+    <img
+      id="caribe"
+      src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Playa_Brava_o_Siete_Olas.JPG"
+      alt="Región Caribe"
+      width="580px"
+      style="border-radius: 30px; border: solid black;"
+    />
+    <h2 id="tit2">Región Caribe</h2>
+    <p id="texto1">
+      El norte de Colombia, también conocido como la Región Caribe, es una zona
+      del país donde están presentes los departamentos de Atlántico, Bolívar,
+      Cesar, Córdoba, La Guajira, Magdalena, Sucre y San Adrés y Providencia. En
+      esta el clima es caliente, por lo que si quieres disfrutar de
+      un clima como este puedes dirigirte a esta región.
+    </p>
+    <div id="texto2">
+      <p>
+        Ahora te preguntarás: "¿A qué lugares ir?" o "¿Qué hacer al llegar"; a
+        continuacion algunas actividades de las que podrás disfrutar:
+      </p>
+      <ul style="font-family: cursive" ; class="s">
+        <li>Ir al mar</li>
+        <li>Fiestas de la región caribe</li>
+        <li>Murallas de Cartagena</li>
+        <li>Castillo de Salgar</li>
+        <li>Santuario de Fauna y Flora "Los Flamencos"</li>
+      </ul>
+    </div>
+    <h2 id="mar">Mar</h2>
+    <p id="playas">
+      La región caribe es también conocida por sus hermosas playas. A
+      continuación algunas de ellas:
+    </p>
+    <a
+      id="SantaMarta"
+      href="https://www.decameron.com/es/co-destinos/colombia/santa-marta/decameron-galeon"
+    >
+      <img
+        src="https://static.iris.net.co/sostenibilidad/upload/images/2020/3/31/49480_1.jpg"
+        alt="Santa Marta"
+        width="320px"
+    /></a>
+    <a
+      id="Cartagena"
+      href="https://www.decameron.com/es/co-destinos/colombia/cartagena/decameron-cartagena"
+      ><img
+        src="https://cf.bstatic.com/images/hotel/max1280x900/205/205056959.jpg"
+        alt=" Cartagena"
+        width="320px"
+      />
+    </a>
+    <img
+      id="blanco"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A8W4AAH7AbJ4AAAAAElFTkSuQmCC"
+      alt="blanco"
+      height="310px"
+      width="0px"
+      style="border-left: dashed 6px yellow; border-right: dashed 6px yellow"
+    />
+    <p id="playaMarta" style="text-align: center">
+      <b>La bahía de Santa Marta</b>
+    </p>
+    <p id="playaCartagena" style="text-align: center">
+      <b>Bocagrande en Cartagena</b>
+    </p>
+    <p id="toLinks">
+      En el caso que quieras visitar una de estas dos ciudades haz click en los
+      siguientes links o en las imagenes previas para consultar las páginas de
+      hoteles.
+    </p>
+    <p id="hotel1">
+      <a
+        href="https://www.decameron.com/es/co-destinos/colombia/santa-marta/decameron-galeon"
+      >
+        Hotel en Santa Marta</a
+      >
+    </p>
+    <p id="hotel2">
+      <a
+        href="https://www.decameron.com/es/co-destinos/colombia/cartagena/decameron-cartagena"
+      >
+        Hotel en Cartagena</a
+      >
+    </p>
+    <div id="isla">
+      <p>
+        Dirigiendose aun más al norte se encuentra la Isla de San Andrés y
+        Providencia la cual también tiene lindas playas. A continuación a la
+        derecha una de estas =>
+      </p>
+      <p>
+        En caso de querer visitar esta isla podrás dirigirte a los siguientes
+        links para consultar páginas de hoteles:
+      </p>
+      <ul>
+        <li>
+          <a href="https://www.bahiasardina.com/">Hotel Bahía Sardina</a>
+        </li>
+        <li>
+          <a
+            href="https://www.decameron.com/es/co-destinos/colombia/isla-de-san-andres/decameron-marazul"
+          >
+            Hotel Decameron Marazul</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div id="sanAndrés">
+      <img
+        src="https://enviajes.cl/wp-content/uploads/2016/06/Bahia-Sardina-San-Andres.jpg"
+        alt="San Andrés"
+        width="380px"
+      />
+      <p><b>Bahía Sardina</b></p>
+    </div>
+    <h2 id="fiestas">Fiestas en la región Caribe</h2>
+    <p id="fiestas2">
+      Si quieres participar en alguna de las celebraciones tradicionales
+      de esta región, podrás disfrutar del Carnaval de Barranquilla y las Fiestas
+      del Mar entre otras. A continuación alguna información
+      sobre estas fiestas.
+    </p>
+    <div id="car1">
+      <h3>Carnaval de Barranquilla</h3>
+      <p>
+        Este es uno de los carnavales más importantes de Colombia y es celebrado
+        en la ciudad de Barranquila, específicamente inicia el sábado anterior
+        al miércoles de ceniza y termina al martes siguiente de haber iniciado.
+        Durante este están presentes algunas carrozas y danzas tradicionales
+        (como la danza del Congo, la Cumbiamba o la danza del Mapale). Durante
+        el primer día de carnaval se realiza un gran desfile que lleva como
+        nombre "Batalla de Flores" el cual es encabezado por la reina del
+        carnaval, y esta festividad es clausurada con "La muerte de Joselito"
+        que simboliza el fin del carnaval.
+      </p>
+      <img
+        src="https://media.metrolatam.com/2020/02/23/c3a884093a98fa33-fd7b446f2430a6b9cd57306175d5b05b-1200x800.jpg"
+        alt="Danza carnaval de Barranquilla"
+        width="380px"
+      />
+    </div>
+    <div id="car2">
+      <h3>Fiestas del Mar</h3>
+      <p>
+        También es una de las fiestas más importantes de la region Caribe,
+        especialmente de la ciudad de Santa Marta, lugar donde se celebra
+        anualmente a mitad de cada año. Se realizan distintos
+        deportes acuáticos (como competencias de natación, regata, bicicletas
+        marinas, entre otras), en 3 diversos escenarios: las
+        bahías de "El Rodadero", Santa Marta y Taganga. Además, se realiza un 
+        desfile donde están presentes algunas carrozas y danzas tradicionales.
+      </p>
+      <img
+        src="https://pasionporsantamarta.com/contenido/wp-content/uploads/2017/06/Desfile-Folclorico-Fiesta-del-Mar.jpg"
+        alt="carroza Fiesta del mar"
+        width="400px"
+      />
+    </div>
+    <p id="p2">
+      En caso de querer participar en estas festividades podrás viajar a través
+      de una de las siguientes aerolíneas, colsultando los siguientes links:
+    </p>
+    <a
+      id="Barranquilla"
+      href="https://www.latam.com/es-co/tiquetes-a-barranquilla?gclid=EAIaIQobChMIlqOyle-i7AIVDY-GCh2JVgvzEAAYASAAEgKGMPD_BwE&gclsrc=aw.ds"
+      >Link a Barranquilla</a
+    >
+    <a
+      id="Santa2"
+      href="https://www.vivaair.com/co/es/tiquetes-baratos/santa-marta"
+      >Link a Santa Marta</a
+    >
+    <div id="lugares">
+      <h2>Otros lugares</h2>
+      <p>
+        En caso de querer visitar otros lugares de esta región podrás dirigirte
+        a:
+      </p>
+    </div>
+    <div id="murallas">
+      <img
+        src="https://www.ecured.cu/images/7/71/MurallaCartagena.jpg"
+        alt="murallas de Cartagena"
+        width="380px"
+      />
+      <p><b>Las murallas de Cartagena</b></p>
+    </div>
+    <div id="castillo">
+      <img
+        src="https://revistas.elheraldo.co/sites/default/files/2013/10/16/articulo/122591-castillo_-_orlando_amador_1.jpg"
+        alt="catillo de Salgar"
+        width="380px"
+      />
+      <p><b>El castillo de Salgar</b></p>
+    </div>
+    <div id="flamencos">
+      <img
+        src="https://blog.redbus.co/wp-content/uploads/2018/01/parque_de_los_flamingos-1280x720.jpg"
+        alt="Santuario de Fauna y Flora Los Flamencos "
+        width="400px"
+      />
+      <p><b>Santuario de Fauna y Flora "Los Flamencos"</b></p>
+    </div>
+    <p id="final">
+      En caso de querer conocer más lugares de Colombia podrás dirigirte a la
+      sección de "Centro" y "Sur" dando click en la barra de navegación superior.
+    </p>
+    <h2 style="margin: 0px" id="finNorte">.</h2>
+  </body>
+</html>

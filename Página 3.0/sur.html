@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viaje a Colombia</title>
+  <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+          crossorigin="anonymous">
+  <style>
+    body {
+      width: 70%;
+      min-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto;
+      grid-template-areas: "Nav Nav""elemento1 elemento1" "sur sur" "texto1 texto1" "tit2 tit2" "Nariño1 Nariño2"
+      "Santuario Santuario" "Lajas Lajas2" "lago1 lago2" "carnaval carnaval" "ByN1 ByN2" "Amazonas Amazonas"
+      "Amazonas2 A2" "micos micos" "micos2 micos2I" "Parque1 Parque2" "final final" "finSur finSur";
+    }
+
+    h1 {
+      color: gold;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 40px;
+      text-align: center;
+      margin: 18px;
+    }
+
+    h2 {
+      color: blue;
+      text-align: center;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 28px;
+      background-color: yellow;
+      margin: 8px;
+    }
+    h3{
+        color: navy;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 23px;
+        padding: 5px;
+        background-color: gold;
+        margin: 8px;
+      }
+    p {
+      font-family: cursive;
+      font-size: 18px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+    }
+    ol{
+      font-size: 18px;
+      font-family: cursive;
+    }
+    a{
+      text-decoration: none;
+      font-family: cursive;
+      font-size: 18px;
+    }
+    .Inicio {
+      font-family: cursive;
+      font-size: 18px;
+      list-style: none;
+      padding: 0px;
+      width: 90%;
+      margin: auto;
+      background-color: lightyellow;
+      border-radius: 10px;
+    }
+
+    .Inicio li a {
+      text-decoration: none;
+      color: black;
+      padding: 18px;
+      display: block;
+    }
+
+    .Inicio li {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .Inicio li a:hover {
+      background-color: beige;
+      font-size: 22px;
+      padding: 14px;
+    }
+
+    #Nav {
+      grid-area: Nav;
+    }
+
+    #elemento1 {
+      grid-area: elemento1;
+    }
+
+    #sur {
+      grid-area: sur;
+    }
+
+    #tit2 {
+      grid-area: tit2;
+    }
+    #texto1{
+      grid-area: texto1;
+      margin-top: 8px;
+    }
+    #Nariño1 {
+      grid-area: Nariño1;
+      margin-right: 25px;
+    }
+    #Nariño2{
+      grid-area: Nariño2;
+      margin-top: 14px;
+    }
+    #Santuario{
+      grid-area: Santuario;
+    }
+    #Lajas{
+      grid-area: Lajas;
+      margin-top: 10px;
+    }
+    #Lajas2{
+      grid-area: Lajas2;
+    }
+    #lago1{
+      grid-area: lago1;
+      margin-right: 25px;
+      text-align: justify;
+    }
+    #lago2{
+      grid-area: lago2;
+      margin-left: 25px;
+      text-align: justify;
+    }
+    #carnaval{
+      grid-area: carnaval;
+    }
+    #ByN1{
+      grid-area: ByN1;
+      text-align: justify;
+      margin-right: 20px;
+    }
+    #ByN2{
+      grid-area: ByN2;
+    }
+    #Amazonas{
+      grid-area: Amazonas;
+    }
+    #Amazonas2{
+      grid-area: Amazonas2;
+      margin-top: 10px;
+    }
+    #A2{
+      grid-area: A2;
+    }
+    #micos{
+      grid-area: micos;
+    }
+    #micos2{
+      grid-area: micos2;
+      text-align: justify;
+    }
+    #micos2I{
+      grid-area: micos2I;
+    }
+    #Parque1{
+      grid-area: Parque1;
+      margin-right: 25px;
+      text-align: justify;
+    }
+    #Parque2{
+      grid-area: Parque2;
+      margin-left: 25px;
+      text-align: justify;
+    }
+    #final {
+        grid-area: final;
+        text-align: center;
+      }
+      #finSur {
+        grid-area: finSur;
+        color: yellow;
+      }
+  </style>
+</head>
+<body>
+  <ul id="Nav" class="Inicio">
+    <li style="
+          padding-right: 10px;
+          padding-left: 40px;
+          font-size: 28px;
+          font-weight: 700;
+          font-family: 'Times New Roman', Times, serif;
+        ">
+      Colombia
+    </li>
+    <li>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png"
+        alt="Colombia" width="50px" style="margin-top: 10px; border-radius: 10px" />
+    </li>
+    <li style="float: right"><a href="index.html">Inicio</a></li>
+    <li style="padding-left: 75px"><a href="norte.html">Norte</a></li>
+    <li><a href="centro.html">Centro</a></li>
+    <li><a href="sur.html">Sur</a></li>
+  </ul>
+  <h1 id="elemento1">Bienvenido al sur de Colombia</h1>
+  <img 
+    id="sur" 
+    src="https://static.iris.net.co/dinero/upload/images/2014/11/10/202978_93352_1.jpg"
+    alt="Amazonas" 
+    width="580px" 
+    style="border-radius: 30px; border: solid black;" />
+    <p id="texto1">
+      En esta sección solo se mencionan algunos lugares del sur de Colombia, 
+      especialmente los que se encuentran en las zonas más al sur.
+    </p>
+  <h2 style="margin-top: 1px" id="tit2">Nariño</h2>
+  <div id="Nariño1">
+    <p>
+      Nariño es un departamento ubicado al sur de Colombia que fronteriza 
+      con el país de Ecuador. En caso de venir
+      a aquí podrás hacer varias actividades y visitar varios lugares,
+      entre estos:
+    </p>
+    <ol>
+      <li>Santuario de las Lajas</li>
+      <li>Laguna de la Cocha</li>
+      <li>Laguna Verde (Volcán Azufral)</li>
+      <li>Carnaval de Blancos y Negros</li>
+    </ol>
+  </div>
+  <img id="Nariño2"
+       src="https://confidencialcolombia.com/wp-content/uploads/2018/02/Laj.jpg" 
+       alt="Nariño"
+       width="400px"
+  >
+    <h3 id="Santuario">1. Santuario de las Lajas</h3>
+    <img id="Lajas"
+         src="https://live.staticflickr.com/643/33267110656_dc45b7c321_b.jpg" 
+         alt="Santuario de las Lajas"
+         width="400px"
+         >
+    <div id="Lajas2">
+      <p>
+        Este es un templo y basílica dedicado a Nuestra Señora de las Lajas ubicado
+        en Ipiales, en el departamento de Nariño. Para llegar hasta el templo podrás
+        recorrer un sendero donde encontrarás a tu alrededor placas conmemorativas
+        de personas a sus familiares o amigos difuntos. 
+        <br>
+        En caso de no saber como llegar puedes dirigirte directamente a la ciudad
+        de Ipiales consultando el siguiente link, o también dirigiéntote a 
+        la ciudad de Pasto y de allí ir a Ipiales.
+      </p>
+      <a 
+        href="https://www.satena.com/comercial/rutas-destinos/ipiales/">Link Viaje a Ipiales</a>
+    </div>
+    <div id="lago1">
+      <h3>2. Lago de la Cocha</h3>
+      <p>
+        Esta laguna es un embalse natural de origen glacial ubicada a 40 minutos de
+        la ciudad de Pasto. Dentro de esta se encuentra la Isla de la Corota, a la
+        que se puede acceder a través de una lancha desde el borde de la laguna 
+        hasta la isla. Al llegar se puede cruzar un sendero hasta llegar a un mirador
+        desde el que se puede observar la isla y la laguna, además de poder visitar
+        la capilla de la Virgen de Lourdes.
+      </p>
+      <img 
+           src="https://media-cdn.tripadvisor.com/media/photo-s/04/3a/0b/b4/la-laguna-de-la-cocha.jpg" 
+           alt="Lago de la Cocha"
+           width="380px">  
+    </div> 
+    <div id="lago2">
+      <h3>3. Laguna verde</h3>
+      <p>
+        Esta laguna se ubica en la boca del volcán Azufral, muy cerca al municipio de 
+        Túquerres, Nariño. Su color verde se debe a las concentraciones de azufre generadas
+        por la alta actividad volcánica. Debido a esto el agua en algunas partes es tibia y
+        en otras es casi hirviente, por lo que solamente 
+        se puede observar.
+      </p>
+      <img src="https://lh3.googleusercontent.com/proxy/jtvtNUz3SLcDOFKWsAvLvHd63UkwClcfxUIDSQUu0Skk3XddkmMPFjwW8EKvWMEUV0xzg6ou7BcTs_5UkmLRb_qqYQyZ-1vq9tUPGKjbuTQKbdjuxFtyMb4UZ_74NoqUGgpWLqwoEsFm2d2XggoA8hSYjyV4M6awqE2J8XS53UJG8ExQjPuAlw-AaP00kqKnGShf-PBd-nOrRg" 
+           alt="Laguna verde">
+    </div> 
+    <h3 id="carnaval">4. Carnaval de Blancos y Negros</h3>
+    <div id="ByN1">
+      <p>
+        Por otro lado, si quieres estar en una de las fiestas tradicionales de Nariño,
+        puedes disfrutar del carnaval de Blancos y Negros, el cual se celebra durante 
+        los primeros días de cada año, del 3 al 6 de enero. Este se realiza desde el
+        año de 1546 y fue nombrado patrimonio de la nación en 2002. Este no se celebra
+        en una única ciudad, si no en todo Nariño, así que en caso de querer participar
+        en este carnaval puedes dirigirte a cualquiera de las ciudades principales 
+        del departamento.
+      <br> 
+      <br>
+        En caso que quieras visitar Nariño podrás viajar a través de una de las 
+        aerolíneas, colsultando los siguientes links:
+        <ul>
+          <li>
+            <a
+              href="https://www.avianca.com/co/es/descubre-y-compra/destinos/vuelos-a-pasto/"
+              >Viaje a Pasto</a
+            >
+          </li>
+          <li>
+            <a href="https://www.satena.com/comercial/rutas-destinos/ipiales/"
+              >Viaje a Ipiales</a
+            >
+          </li>
+          <li>
+            <a href="https://www.satena.com/comercial/rutas-destinos/tumaco/"
+              >Viaje a Tumaco</a
+            >
+          </li>
+        </ul>
+      </p>
+    </div>
+    <div id="ByN2">
+      <img
+           src="https://rtvc-assets-radionacional-v2.s3.amazonaws.com/s3fs-public/styles/redes1200x630/public/senalradio/articulo-noticia/galeriaimagen/a968d988da3b5623e52a9338e2760928.jpg?itok=k12tW0YS" 
+           alt="Carroza carnaval Blancos y Negros"
+           width="380px"
+           style="margin-top: 10px;"
+           >
+      <p style="text-align: center;"><b>Una de las carrozas del carnaval</b></p>
+      <img src="https://www.reportur.com/wp-content/uploads/2019/09/satena-ser%C3%A1-nuevamente-capitalizada.jpg" 
+           alt="Avión Satena"
+           width="350px">
+    </div>
+    <h2 id="Amazonas">Amazonas Colombiano</h2>
+    <img id="Amazonas2"
+        src="https://static.iris.net.co/dinero/upload/images/2014/11/30/203726_235755_1.jpg" 
+         alt="Rio Amazonas"
+         width="400px">
+    <p id="A2">
+      El Amazonas colombiano es un departamento de Colombia ubicado en el 
+      extremo sur del país; está conformado en su mayoría por la selva 
+      amazónica, la cual está también presente en el país de Perú y Brasil.
+      Este departamento es también atravesado por varios ríos, entre los cuales
+      "El rio Putumayo" y el "Rio Amazonas", este último, el más largo del mundo. A 
+      continuación algunos lugares que puedes visitar en este departamento:
+    </p>
+    <h3 id="micos">Isla Los Micos</h3>
+    <p id="micos2">Es una isla fluvial del rio Amazona donde se encuentran una gran
+       cantidad de micos, de allí el nombre de la isla. Al llegar un guía te 
+       guiará y explicará sobre la reproducción, hábitos alimenticios y el 
+       comportamiento de los micos, además de poder tomarse una foto con estos
+       animales.
+    </p>  
+    <img id="micos2I"
+         src="https://www.aviatur.com/source/contenidos/isla-de-los-micos-amazonas-colombia.jpg" 
+         alt="Isla Los Micos"
+         width="350px"
+         >
+    <div id="Parque1">
+      <h3>Parque nacional Amacayacu</h3>
+      <p>
+        Este es un parque nacional ubicado en el departamento del Amazonas donde podrás encontrar
+        a más de 34.500 especies de aves, además de poder observar al Titi de cabeza blanca. Dentro
+        de este parque podrás disfrutar de largos senderos rodeados de pura naturaleza y
+        escuchar el sonido de varias aves.
+      </p>
+      <img 
+           src="https://www.sitiosturisticoscolombia.com/wp-content/uploads/amacayacu-leticia-amazonas.jpg" 
+           alt="Parque Nacional Amacayacu"
+           width="400px"
+           >
+    </div>
+    <div id="Parque2">
+      <h3>Parque mundo Amazónico</h3>
+      <p>
+        En caso de querer conocer fauna y flora, este es tu parque. En este podrás visitar el jardín botánico,
+        donde encontrarás plantas amazónicas y frutas nativas; un
+        acuario donde podrás conocer las pirañas y muchos otros peces del Amazonas.
+      </p>
+      <img
+           src="https://panel.baquianos.com/img/blog/2019/23/-c5sx360.jpg" 
+           alt="Parque Mundo Amazónico"
+           width="400px"
+           >
+    </div>
+    <p id="final">
+      En caso de querer conocer más lugares de Colombia podrás dirigirte a la
+      sección de "Norte" y "Centro" dando click en la barra de navegación superior.
+    </p>
+    <h2 style="margin: 0px" id="finSur">.</h2>
+</body>
+</html>

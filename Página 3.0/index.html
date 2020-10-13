@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viaje a Colombia</title>
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+          crossorigin="anonymous">
+    <style>
+      body {
+        width: 70%;
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "Nav Nav" "elemento1 elemento1" "foto1 foto1" "elemento2 elemento2"
+          "texto1 texto2" "tit2 tit2" "llegar imgAvión" "bandera llegar2" "T T" "table table" "final final" "finIndex finIndex";
+      }
+      h1 {
+        color: gold;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 40px;
+        text-align: center;
+        margin: 18px;
+      }
+      h2 {
+        color: blue;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 28px;
+        background-color: yellow;
+        margin: 8px;
+      }
+      p {
+        font-family: cursive;
+        font-size: 18px;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+      }
+      .Inicio {
+        font-family: cursive;
+        font-size: 18px;
+        list-style: none;
+        padding: 0px;
+        width: 90%;
+        margin: auto;
+        background-color: lightyellow;
+        border-radius: 10px;
+      }
+      .Inicio li a {
+        text-decoration: none;
+        color: black;
+        padding: 18px;
+        display: block;
+      }
+      .Inicio li {
+        display: inline-block;
+        text-align: center;
+      }
+      .Inicio li a:hover {
+        background-color: beige;
+        font-size: 22px;
+        padding: 14px;
+      }
+      .s {
+        list-style-type: square;
+      }
+      #Nav {
+        grid-area: Nav;
+      }
+      #elemento1 {
+        grid-area: elemento1;
+      }
+      #foto1 {
+        grid-area: foto1;
+      }
+      #elemento2 {
+        grid-area: elemento2;
+      }
+      #texto1 {
+        grid-area: texto1;
+        margin-right: 25px;
+      }
+      #texto2 {
+        grid-area: texto2;
+        margin-left: 28px;
+      }
+      #tit2 {
+        grid-area: tit2;
+      }
+      #llegar {
+        grid-area: llegar;
+        margin-right: 25px;
+      }
+      #imgAvión {
+        grid-area: imgAvión;
+      }
+      #llegar2 {
+        grid-area: llegar2;
+      }
+      #bandera {
+        grid-area: bandera;
+      }
+      #finIndex {
+        grid-area: finIndex;
+        color: yellow;
+        margin-top: 20px;
+      }
+      #final {
+        grid-area: final;
+        text-align: center;
+      }
+      #table{
+        grid-area: table;
+      }
+      #T{
+        grid-area: T;
+        text-align: center;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="Nav" class="Inicio">
+      <li
+        style="
+          padding-left: 40px;
+          padding-right: 10px;
+          font-size: 28px;
+          font-weight: 700;
+          font-family: 'Times New Roman', Times, serif;
+        "
+      >
+        Colombia
+      </li>
+      <li>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png"
+          alt="Colombia"
+          width="50px"
+          style="margin-top: 10px; border-radius: 10px"
+        />
+      </li>
+      <li style="float: right"><a href="index.html">Inicio</a></li>
+      <li style="padding-left: 75px"><a href="norte.html">Norte</a></li>
+      <li><a href="centro.html">Centro</a></li>
+      <li><a href="sur.html">Sur</a></li>
+    </ul>
+    <h1 id="elemento1">¿Como tener una aventura inolvidable en...</h1>
+    <img
+      src="https://st.depositphotos.com/1498512/4918/v/950/depositphotos_49183259-stock-illustration-map-of-colombia-vector-illustration.jpg"
+      alt="Mapa Colombia"
+      width="450px"
+      id="foto1"
+    />
+    <h2 id="elemento2">Información antes de viajar</h2>
+    <p id="texto1">
+      Colombia es un país ubicado al norte de Sur América y es conocido por el
+      delicioso cafe que se produce allí, llamandolo el país cafetero. Pero...
+      ¿Alguna vez has visitado Colombia o piensas viajar y no sabes que hacer al
+      llegar? Esta página te trae la respuesta:
+    </p>
+    <div id="texto2">
+      <p>Iniciemos con las 3 principales ciudades del país, estas son:</p>
+      <ul style="font-family: cursive">
+        <li class="s">Bogotá, capital del país</li>
+        <li class="s">Medellín</li>
+        <li class="s">Cali</li>
+      </ul>
+    </div>
+    <h2 id="tit2">¿Como visitar Colombia?</h2>
+    <p id="llegar">
+      Hay varias maneras para poder visitar Colombia.
+      Una de las formas mas fáciles es llegar a través del Aeropuerto
+      Internacional el Dorado, ubicado en Bogotá D.C. Por otro lado, si quieres
+      ir directamente al norte del país podrás dirigirte al aeropuerto
+      internacional Ernesto Cortizzos, ubicado en la ciudad de Barranquilla, sin
+      embargo los destinos que tendrá este aeropuerto serán mas limitados a
+      comparación del aeropuerto de Bogotá.
+    </p>
+    <img
+      id="imgAvión"
+      src="https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/KBHWJHMFRZC6LJ6EPZG6X37JKY.jpg"
+      alt="Avión"
+      width="340px"
+      style="margin-top: 20px; border-radius: 10px"
+    />
+    <p id="llegar2">
+      Por último, si deseas llegar directamente al sur del país podrás dirigirte
+      a través del aeropuerto internacional Alfredo Vásquez Cobo, ubicado en la
+      ciudad de Leticia.
+    </p>
+    <img
+      id="bandera"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png"
+      alt="bandera"
+      width="300px"
+      height="130px"
+      style="border-radius: 10px"
+    />
+    <p id="T">
+      A continuación un resumen de los lugares que van a ser mostrados en las siguientes secciones: 
+    </p>
+    <table id="table" class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Norte</th>
+          <th scope="col">Centro</th>
+          <th scope="col">Sur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">Mar</td>
+          <td>Bogotá</td>
+          <td>Santuario de Las Lajas</td>
+        </tr>
+        <tr>
+          <td scope="row">Fiestas en la Región Caribe</td>
+          <td>Eje Cafetero</td>
+          <td>Lago de la Cocha</td>
+        </tr>
+        <tr>
+          <td scope="row">Murallas de Cartagena</td>
+          <td>Medellín</td>
+          <td>Laguna Verde</td>
+        </tr>
+        <tr>
+          <td scope="row">Castillo de Salgar</td>
+          <td>Cali</td>
+          <td>Carnaval de Blancos y Negros</td>
+        </tr>
+        <tr>
+          <td scope="row">
+            Santuario de Fauna y Flora "Los Flamencos"
+          </td>
+          <td>Ombligo de Colombia</td>
+          <td>Isla Los Micos</td>
+        </tr>
+        <tr>
+          <td scope="row"></td>
+          <td>Minas de Sal de Nemocón</td>
+          <td>Parque Nacional Amacayacu</td>
+        </tr>
+        <tr>
+          <td scope="row"></td>
+          <td></td>
+          <td>Parque Mundo Amazónico</td>
+        </tr>
+      </tbody>
+    </table>
+    <p id="final">
+      Además de los lugares ya mencionados, hay varios más en Colombia.
+    </p>
+    <h2 style="margin: 0px" id="finIndex">.</h2>
+  </body>
+</html>

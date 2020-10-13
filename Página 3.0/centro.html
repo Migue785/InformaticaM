@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viaje a Colombia</title>
+    <link rel="stylesheet" 
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+          crossorigin="anonymous">
+    <style>
+      body {
+        width: 70%;
+        font-family: cursive;
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas:
+          "Nav Nav" "elemento1 elemento1" "centro centro" "tit2 tit2" "texto1 texto2" "tit3 tit3" "imgB B"
+          "tMonserrate monserrate" "cafe cafe" "pCafé parques" "MedeCali MedeCali"
+          "Medellín Cali" "viaje viaje" "v1 v2" "lugares lugares" "ombligo minas" "final final" "finCentro finCentro";
+      }
+      h1 {
+        color: gold;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 40px;
+        text-align: center;
+        margin: 18px;
+      }
+      h2 {
+        color: blue;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 28px;
+        background-color: yellow;
+        margin: 8px;
+      }
+      h3{
+        color: navy;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 21px;
+        padding: 5px;
+        background-color: gold;
+        margin: 8px;
+      }
+      p {
+        font-family: cursive;
+        font-size: 18px;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+      }
+      .Inicio {
+        font-family: cursive;
+        font-size: 18px;
+        list-style: none;
+        padding: 0px;
+        width: 90%;
+        margin: auto;
+        background-color: lightyellow;
+        border-radius: 10px;
+      }
+      .Inicio li a {
+        text-decoration: none;
+        color: black;
+        padding: 18px;
+        display: block;
+      }
+      .Inicio li {
+        display: inline-block;
+        text-align: center;
+      }
+      .Inicio li a:hover {
+        background-color: beige;
+        font-size: 22px;
+        padding: 14px;
+      }
+      a {
+        font-family: cursive;
+        text-decoration: none; 
+        font-size: 18px;
+        text-align: center;
+      }
+      #Nav {
+        grid-area: Nav;
+      }
+      #elemento1 {
+        grid-area: elemento1;
+      }
+      #centro {
+        grid-area: centro;
+      }
+      #tit2 {
+        grid-area: tit2;
+      }
+      #texto1 {
+        grid-area: texto1;
+        margin-right: 25px;
+      }
+      #texto2 {
+        grid-area: texto2;
+        margin-left: 18px;
+        font-family: cursive;
+        font-size: 18px;
+      }
+      .square {
+        list-style-type: square;
+      }
+      #tit3 {
+        grid-area: tit3;
+      }
+      #imgB {
+        grid-area: imgB;
+        margin-top: 10px;
+      }
+      #B {
+        grid-area: B;
+        margin-left: 18px;
+      }
+      #tMonserrate {
+        grid-area: tMonserrate;
+        text-align: justify;
+        margin-right: 25px;
+      }
+      #tMonserrate a {
+        text-decoration: none;
+      }
+      #monserrate {
+        grid-area: monserrate;
+        text-align: center;
+      }
+      #cafe {
+        grid-area: cafe;
+      }
+      #cafe2 {
+        grid-area: cafe2;
+      }
+      #parques {
+        grid-area: parques;
+        font-size: 17px;
+        margin-left: 18px;
+      }
+      #pCafé {
+        grid-area: pCafé;
+        text-align: center;
+        margin-right: 25px;
+        margin-top: 15px;
+      }
+      #MedeCali{
+        grid-area: MedeCali;
+        text-align: center;
+      }
+      #Medellín{
+        grid-area: Medellín;
+        margin-right: 25px;
+      }
+      #Cali{
+        grid-area: Cali;
+        margin-left: 17px;
+      }
+      #viaje{
+        grid-area: viaje;
+      }
+      #v1{
+        grid-area: v1;
+        margin-top: 0px;
+      }
+      #v2{
+        grid-area: v2;
+        margin-top: 0px;
+      }
+      #lugares{
+        grid-area: lugares;
+      }
+      #ombligo{
+        grid-area: ombligo;
+        text-align: center;
+      }
+      #minas{
+        grid-area: minas;
+        text-align: center;
+      }
+      #final {
+        grid-area: final;
+        text-align: center;
+      }
+      #finCentro {
+        grid-area: finCentro;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="Nav" class="Inicio">
+      <li
+        style="
+          padding-right: 10px;
+          padding-left: 40px;
+          font-size: 28px;
+          font-weight: 700;
+          font-family: 'Times New Roman', Times, serif;
+        "
+      >
+        Colombia
+      </li>
+      <li>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/1200px-Flag_of_Colombia.svg.png"
+          alt="Colombia"
+          width="50px"
+          style="margin-top: 10px; border-radius: 10px"
+        />
+      </li>
+      <li style="float: right"><a href="index.html">Inicio</a></li>
+      <li style="padding-left: 75px"><a href="norte.html">Norte</a></li>
+      <li><a href="centro.html">Centro</a></li>
+      <li><a href="sur.html">Sur</a></li>
+    </ul>
+    <h1 id="elemento1">Bienvenido al centro de Colombia</h1>
+    <img
+      id="centro"
+      src="https://encolombia.com/wp-content/uploads/2020/05/Regi%C3%B3n-Andina-696x398.jpg"
+      alt="Región Andina"
+      width="580px"
+      style="border-radius: 30px; border: solid black;"
+    />
+    <h2 style="margin-top: 15px" id="tit2">Regiones del centro</h2>
+    <p id="texto1">
+      El centro de Colombia está
+      compuesto por varias partes de distintas regiones. A continuación (en esta
+      sección "centro" de la página) se hablará de varios lugares que se
+      encuentran en mas de una sola región.
+    </p>
+    <div id="texto2">
+      <p>
+        A continuación, las regiones donde se encontrarán los lugares de esta
+        sección:
+      </p>
+      <ul class="square">
+        <li>Región Andina</li>
+        <li>Región Pacífica</li>
+        <li>Región Orinoquía</li>
+      </ul>
+    </div>
+    <h2 id="tit3">Bogotá, la capital</h2>
+    <img
+      id="imgB"
+      src="https://www.ucatolica.edu.co/portal/wp-content/uploads/2018/10/bogota-distrito-capital.jpg"
+      alt="Bogotá"
+      width="360px"
+    />
+    <p id="B">
+      Bogotá es la capital del país y se ubica en el departamento de
+      Cundinamarca, en la región Andina. Tiene una superficie de 1,775 km²
+      y una población de 7.413 millones de habitantes, aproximadamente. El clima
+      de esta ciudad es parcialmente frio, siendo llamada por algunas personas
+      "La Nevera", por lo que si quieres un clima cálido es preferible dirigirse
+      al norte del país.
+    </p>
+    <p id="tMonserrate">
+      En caso de visitar esta ciudad puedes dirigirte al Cerro de Monserrate
+      (imagen de la derecha), el cual pertenece a los cerros orientales, y
+      podrás acceder a este a través de un teleférico o funicular.
+      <br />
+      <br />
+      Si no sabes como llegar hasta Bogotá puedes dirigirte a la sección de
+      <a href="index.html">"Inicio"</a> donde encontrarás alguna información sobre
+      este tema o también podrás dirigirte al siguiente link para conocer más
+      sobre el aeropuerto de Bogotá:
+      <a href="https://eldorado.aero/">Aeropuerto El Dorado</a>
+    </p>
+    <div id="monserrate">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Monserrate_Sanctuary.JPG"
+        alt="Monserrate"
+        width="380px"
+      />
+      <p><b>El Cerro de Monserrate.</b></p>
+    </div>
+    <div id="cafe">
+      <h2>El Eje Cafetero</h2>
+      <p>
+        Ubicado entre los departamentos de Quindío,
+        Risaralda y Caldas, también conocido como "El triangulo del café".
+        Es famoso por el delicioso café que se produce allí, debido a
+        las condiciones climáticas y geológicas que permiten la producción de
+        este durante periodos cortos de tiempo. En caso de venir a aquí, además
+        de probar su café, podrás visitar los siguientes lugares:
+      </p>
+    </div>
+    <div id="parques">
+      <ol>
+        <li>Parque Nacional del Café</li>
+        <li>Parque Nacional de la Cultura Agropecuaria (Panaca)</li>
+      </ol>
+      <img
+        src="https://cdn.colombia.com/sdi/2013/12/10/parque-nacional-de-la-cultura-agropecuaria-panaca-755178.jpg"
+        alt="Parque Panaca, Eje Cafetero"
+        width="380px"
+      />
+      <p style="text-align: center"><b>2. Panaca, Eje Cafetero</b></p>
+      <p>
+        Este es un parque ubicado en el departamento de Quindío el cual esta
+        rodeado por pura naturaleza, podiendo encontrar a más de 4.500 animales.
+        En caso de querer más información dirigirse al siguiente link:
+        <a href="https://panaca.com.co/">Parque de Panaca</a>
+      </p>
+    </div>
+    <div id="pCafé">
+      <img
+        src="https://m.eltiempo.com/uploads/2017/04/11/58ed3e35caf07.jpeg"
+        alt="Parque del Café"
+        width="380px"
+      />
+      <p><b>1. Parque Nacional del Café</b></p>
+      <p style="text-align: justify">
+        Este es un parque temático ubicado en el departamento de Quindío el cual
+        dispone de 40 atracciones divididas en 3: mecánicas, acuáticas y
+        temáticas; ademas de tener varios shows y puestos de alimentos
+        relacionados al café.
+        <br />
+        <br />
+        En caso de querer visitar este parque podrás dirigirte al siguiente
+        link:
+        <a href="https://parquedelcafe.co/es/pasaportes">Parque del Café</a>
+      </p>
+    </div>
+    <div id="MedeCali">
+    <h2>Medellín y Cali</h2>
+    <p> 
+        Si bien Medellín y Cali no se encuentran geográficamente en el centro de Colombia
+        van a ser mencionados aquí.
+        <br>
+        A continuación estas dos ciudades:   
+    </p>
+    </div>
+        
+    <div id="Medellín">
+      <h3>Medellín</h3>
+      <p>Ciudad ubicada en el departamento de Antioquía y la segunda más 
+        poblada del país. En esta ciudad podrás visitar:</p>
+      <img
+        src="https://bibliotecasmedellin.gov.co/content/uploads/sites/6/2018/06/web-1.jpg"
+        alt="Medellín"
+        width="380px"
+      />
+      <p style="text-align: center;"><b>El museo "El Castillo".</b></p>
+      <p style="text-align: justify;">En caso de querer disfrutar de alguna festividad de esta
+         ciudad podrás participar en la Feria de las Flores, el cual es celebrado anualmente 
+         durante los primeros días de Agosto (generalmente del primero al 10 de Agosto). En esta
+        se realizan varias actividades, teniendo como evento principal "El desfile de Silleteros", 
+        en el que varias flores son cargadas en silletas a la espalda. </p>
+        <img 
+        src="https://telemedellin.tv/wp-content/uploads/2018/07/feria.jpg" 
+        alt="Feria de las Flores"
+        width="380px">
+    </div> 
+    <div id="Cali">
+      <h3>Cali</h3>
+      <p>
+        Ciudad ubicada en el sur del departamento del Valle del Cauca y la tercera 
+        más poblada del país. En esta ciudad podrás visitar:
+      </p>
+        <img
+        src="https://www.kienyke.com/sites/default/files/styles/amp_1200x675_16_9/public/2020-05/Zoologico-de-Cali.jpg?itok=GlLMaVri"
+        alt="Cali"
+        width="380px"
+      />
+      <p style="text-align: center;"><b>El Zoológico de Cali.</b></p>
+      <p>
+        Por otro lado, en caso de querer disfrutar de alguna festividad de esta ciudad podrás 
+        participar en la Feria de Cali, también llamada "Feria de la Caña", celebrada
+        entre el 25 y 30 de diciembre de cada año. Durante esta la salsa está muy presente, 
+        teniendo un recorrido de 1km en el que integrantes de escuelas de este ritmo lo bailan.
+        Además de esto hay un desfile de carros auntiguos en el que varios vehículos clásicos
+        (al rededor de 200) desfilan al público.
+       </p>
+       <img 
+       src="https://m.eltiempo.com/uploads/2018/12/28/5c26cdf497997.jpeg" 
+       alt="Feria de Cali" 
+       width="380px">
+    </div>
+      <p id="viaje">Para llegar a estas ciudades podrás dirigirte a los siguientes 
+      links y consultar algunas páginas de aerolineas que te podrán llevar hasta aquí:</p>
+      <ul id="v1">
+       <li><a href="https://www.avianca.com/co/es/descubre-y-compra/destinos/vuelos-a-medellin/">Avianca Medellín</a></li>
+       <li><a href="https://www.latam.com/es-co/tiquetes-a-medellin">Latam Medellín</a></li>
+      </ul>
+      <ul id="v2">
+        <li><a href="https://www.avianca.com/co/es/descubre-y-compra/destinos/vuelos-a-cali/">Avianca Cali</a></li>
+        <li><a href="https://www.latam.com/es-co/tiquetes-a-cali">Latam Cali</a></li>
+      </ul>
+    <div id="lugares">
+      <h2>Otros lugares para visitar</h2>
+      <p style="text-align: center;">
+        Además de los lugares dichos anteriormente hay varios más, entre los cuales "El ombligo de Colombia"
+        y "Las minas de sal de Nemocón". El primero se ubica en el departamento del Metá y marca (a través de un obelisco)
+        el centro geográfico del país y el segundo, ubicado en el departamento de Cundinamarca,
+        es un tunel a 80 metros bajo tierra donde en el pasado eran extraidas grandes cantitades de sal. 
+        <br>
+        A continuación imagenes de estos lugares:
+      </p>
+    </div>
+    <div id="ombligo">
+      <img
+      src="https://www.asieselmeta.com/wp-content/uploads/2018/05/ALTO-MENEGUA.jpg" 
+      alt="Ombligo de Colombia"
+      width="350px">
+      <p><b>Ombligo de Colombia</b></p>
+    </div>
+    <div id="minas">
+      <img src="https://panel.baquianos.com/img/blog/2019/23/-hy9x360.jpg" alt="Minas de Sal" width="380px">
+      <p><b>Minas de sal de Nemocón</b></p>
+    </div>
+    <p id="final">
+      En caso de querer conocer más lugares de Colombia podrás dirigirte a la
+      sección de "Norte" y "Sur" dando click en la barra de navegación superior.
+    </p>
+    <h2 style="margin: 0px" id="finCentro">.</h2>
+  </body>
+</html>
