@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas Lista</title>
+    <style>
+        body {
+        width: 70%;
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        table{
+          padding: 10px;  
+          font-family: cursive;
+        }
+        td,th{
+            padding: 30px;
+            font-family: cursive;
+        }
+        form{
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="formulario">
+        Nombre de la materia
+        <input type="text" name="Materia">
+        Descripción de la tarea
+        <input type="text" name="Descripción_de_la_tarea">
+        Fecha de la tarea
+        <input type="date" name="Fecha">
+        <input type="submit">
+    </form>
+    <table id="tareas"> </table>
+    <script src="tabla.js"></script>
+</body>
+</html>
