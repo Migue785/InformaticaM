@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Final</title>
+    <style>
+        p {
+            font-family: cursive;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        body {
+            width: 70%;
+            min-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "miCanvas miCanvas""s t";
+        }
+
+        #miCanvas {
+            grid-area: miCanvas;
+        }
+
+        #s {
+            grid-area: s;
+        }
+
+        #t {
+            grid-area: t;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="miCanvas" width="1000px" height="500px"></canvas>
+    <script src="juego2.js"></script>
+    <div id="s">
+        <p>Su puntaje es:</p>
+        <p id="Score"></p>
+    </div>
+    <div id="t">
+        <p>Su tiempo (en segundos) es:</p>
+        <p id="tempo"></p>
+    </div>
+
+</body>
+
+</html>
