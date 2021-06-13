@@ -74,6 +74,36 @@ let yP4 = 390;
 let xP5 = 390;
 let yP5 = 240;
 
+//datos enemigos
+
+let xE1 = 300;
+let yE1 = 80;
+let vE1 = 30;
+function moverEnemigo1() {
+    let dY1 = dT / 1000 * vE1;
+    yE1 = yE1 + dY1;
+    if (yE1 > 110) {
+        vE1 = -vE1;
+    }
+    if (yE1 < 70) {
+        vE1 = -vE1;
+    }
+}
+
+let xE2 = 215;
+let yE2 = 345;
+let vE2 = 70;
+function moverEnemigo2() {
+    let dX2 = dT / 1000 * vE2;
+    xE2 = xE2 + dX2;
+    if (xE2 > 315) {
+        vE2 = -vE2;
+    }
+    if (xE2 < 210) {
+        vE2 = -vE2;
+    }
+}
+
 function moverYDibujar() {
     ctx.clearRect(0, 0, 1000, 1000);
     let dX = dT / 1000 * vX
@@ -90,10 +120,17 @@ function moverYDibujar() {
     dibujarPuntos(xP4, yP4)
     dibujarPuntos(xP5, yP5)
 
+    dibujarEnemigos(xE1, yE1)
+    dibujarEnemigos(xE2, yE2)
+
     xC = x + 12.5;
     yC = y + 12.5;
 
     controladorPuntos()
+    controladorEnemigos()
+
+    moverEnemigo1()
+    moverEnemigo2()
 
     Score.innerHTML = puntos;
     tempo.innerHTML = tiempo;
@@ -328,6 +365,73 @@ function controladorPuntos() {
         xP2 = 900;
         yP2 = 900;
         puntos = puntos + 1;
+    }
+    if (Math.sqrt(Math.pow(xC - xP3, 2) + Math.pow(yC - yP3, 2)) <= 20) {
+        xP3 = 900;
+        yP3 = 900;
+        puntos = puntos + 1;
+    }
+    if (Math.sqrt(Math.pow(xC - xP4, 2) + Math.pow(yC - yP4, 2)) <= 20) {
+        xP4 = 900;
+        yP4 = 900;
+        puntos = puntos + 1;
+    }
+    if (Math.sqrt(Math.pow(xC - xP5, 2) + Math.pow(yC - yP5, 2)) <= 20) {
+        xP5 = 900;
+        yP5 = 900;
+        puntos = puntos + 1;
+    }
+}
+
+function dibujarEnemigos(xE, yE) {
+    ctx.beginPath();
+    ctx.strokeStyle = "black"
+    ctx.fillStyle = "blue";
+    ctx.arc(xE, yE, 5, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.fill();
+}
+
+function controladorEnemigos() {
+    if (Math.sqrt(Math.pow(xC - xE1, 2) + Math.pow(yC - yE1, 2)) <= 20) {
+        x = 90;
+        y = 60;
+        puntos = 0;
+        tiempo = 0;
+        xP1 = 480;
+        yP1 = 90;
+
+        xP2 = 120;
+        yP2 = 270;
+
+        xP3 = 390;
+        yP3 = 360;
+
+        xP4 = 180;
+        yP4 = 390;
+
+        xP5 = 390;
+        yP5 = 240;
+    }
+    if (Math.sqrt(Math.pow(xC - xE2, 2) + Math.pow(yC - yE2, 2)) <= 20) {
+        x = 90;
+        y = 60;
+        puntos = 0;
+        tiempo = 0;
+        xP1 = 480;
+        yP1 = 90;
+
+        xP2 = 120;
+        yP2 = 270;
+
+        xP3 = 390;
+        yP3 = 360;
+
+        xP4 = 180;
+        yP4 = 390;
+
+        xP5 = 390;
+        yP5 = 240;
     }
     if (Math.sqrt(Math.pow(xC - xP3, 2) + Math.pow(yC - yP3, 2)) <= 20) {
         xP3 = 900;
