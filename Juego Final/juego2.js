@@ -92,7 +92,7 @@ function moverEnemigo1() {
 
 let xE2 = 215;
 let yE2 = 345;
-let vE2 = 70;
+let vE2 = 80;
 function moverEnemigo2() {
     let dX2 = dT / 1000 * vE2;
     xE2 = xE2 + dX2;
@@ -101,6 +101,62 @@ function moverEnemigo2() {
     }
     if (xE2 < 210) {
         vE2 = -vE2;
+    }
+}
+
+let xE3 = 110;
+let yE3 = 210;
+let vE3 = 150;
+function moverEnemigo3() {
+    let dX3 = dT / 1000 * vE3;
+    xE3 = xE3 + dX3;
+    if (xE3 > 290) {
+        vE3 = -vE3;
+    }
+    if (xE3 < 105) {
+        vE3 = -vE3;
+    }
+}
+
+let xE4 = 345;
+let yE4 = 345;
+let vE4 = 130;
+function moverEnemigo4() {
+    let dY4 = dT / 1000 * vE4;
+    yE4 = yE4 + dY4;
+    if (yE4 > 410) {
+        vE4 = -vE4;
+    }
+    if (yE4 < 340) {
+        vE4 = -vE4;
+    }
+}
+
+let xE5 = 345;
+let yE5 = 225;
+let vE5 = 130;
+function moverEnemigo5() {
+    let dY5 = dT / 1000 * vE5;
+    yE5 = yE5 + dY5;
+    if (yE5 > 290) {
+        vE5 = -vE5;
+    }
+    if (yE5 < 220) {
+        vE5 = -vE5;
+    }
+}
+
+let xE6 = 435;
+let yE6 = 290;
+let vE6 = -130;
+function moverEnemigo6() {
+    let dY6 = dT / 1000 * vE6;
+    yE6 = yE6 + dY6;
+    if (yE6 > 290) {
+        vE6 = -vE6;
+    }
+    if (yE6 < 224) {
+        vE6 = -vE6;
     }
 }
 
@@ -122,6 +178,10 @@ function moverYDibujar() {
 
     dibujarEnemigos(xE1, yE1)
     dibujarEnemigos(xE2, yE2)
+    dibujarEnemigos(xE3, yE3)
+    dibujarEnemigos(xE4, yE4)
+    dibujarEnemigos(xE5, yE5)
+    dibujarEnemigos(xE6, yE6)
 
     xC = x + 12.5;
     yC = y + 12.5;
@@ -131,6 +191,10 @@ function moverYDibujar() {
 
     moverEnemigo1()
     moverEnemigo2()
+    moverEnemigo3()
+    moverEnemigo4()
+    moverEnemigo5()
+    moverEnemigo6()
 
     Score.innerHTML = puntos;
     tempo.innerHTML = tiempo;
@@ -433,20 +497,85 @@ function controladorEnemigos() {
         xP5 = 390;
         yP5 = 240;
     }
-    if (Math.sqrt(Math.pow(xC - xP3, 2) + Math.pow(yC - yP3, 2)) <= 20) {
-        xP3 = 900;
-        yP3 = 900;
-        puntos = puntos + 1;
+    if (Math.sqrt(Math.pow(xC - xE3, 2) + Math.pow(yC - yE3, 2)) <= 20) {
+        x = 90;
+        y = 60;
+        puntos = 0;
+        tiempo = 0;
+        xP1 = 480;
+        yP1 = 90;
+
+        xP2 = 120;
+        yP2 = 270;
+
+        xP3 = 390;
+        yP3 = 360;
+
+        xP4 = 180;
+        yP4 = 390;
+
+        xP5 = 390;
+        yP5 = 240;
     }
-    if (Math.sqrt(Math.pow(xC - xP4, 2) + Math.pow(yC - yP4, 2)) <= 20) {
-        xP4 = 900;
-        yP4 = 900;
-        puntos = puntos + 1;
+    if (Math.sqrt(Math.pow(xC - xE4, 2) + Math.pow(yC - yE4, 2)) <= 20) {
+        x = 90;
+        y = 60;
+        puntos = 0;
+        tiempo = 0;
+        xP1 = 480;
+        yP1 = 90;
+
+        xP2 = 120;
+        yP2 = 270;
+
+        xP3 = 390;
+        yP3 = 360;
+
+        xP4 = 180;
+        yP4 = 390;
+
+        xP5 = 390;
+        yP5 = 240;
     }
-    if (Math.sqrt(Math.pow(xC - xP5, 2) + Math.pow(yC - yP5, 2)) <= 20) {
-        xP5 = 900;
-        yP5 = 900;
-        puntos = puntos + 1;
+    if (Math.sqrt(Math.pow(xC - xE5, 2) + Math.pow(yC - yE5, 2)) <= 20) {
+        x = 90;
+        y = 60;
+        puntos = 0;
+        tiempo = 0;
+        xP1 = 480;
+        yP1 = 90;
+
+        xP2 = 120;
+        yP2 = 270;
+
+        xP3 = 390;
+        yP3 = 360;
+
+        xP4 = 180;
+        yP4 = 390;
+
+        xP5 = 390;
+        yP5 = 240;
+    }
+    if (Math.sqrt(Math.pow(xC - xE6, 2) + Math.pow(yC - yE6, 2)) <= 20) {
+        x = 90;
+        y = 60;
+        puntos = 0;
+        tiempo = 0;
+        xP1 = 480;
+        yP1 = 90;
+
+        xP2 = 120;
+        yP2 = 270;
+
+        xP3 = 390;
+        yP3 = 360;
+
+        xP4 = 180;
+        yP4 = 390;
+
+        xP5 = 390;
+        yP5 = 240;
     }
 }
 
