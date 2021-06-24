@@ -18,7 +18,7 @@ let vYizquierda = -100;
 
 let puntos = 0;
 let tiempo = 0;
-let x = 90;
+let x = 93;
 let y = 60;
 let vX = 0;
 let vY = 0;
@@ -198,6 +198,30 @@ function moverYDibujar() {
 
     Score.innerHTML = puntos;
     tempo.innerHTML = tiempo;
+
+    if (puntos == 5 && x >= 510 && y > 210 && y < 325) {
+        alert(`Ganaste!! Tu tiempo fue de ${tiempo} segundos. Ahora vas a volver a la posición de inicio`)
+        puntos = 0;
+        tiempo = 0;
+        x = 90;
+        y = 60;
+        vX = 0;
+        vY = 0;
+        xP1 = 480;
+        yP1 = 90;
+
+        xP2 = 120;
+        yP2 = 270;
+
+        xP3 = 390;
+        yP3 = 360;
+
+        xP4 = 180;
+        yP4 = 390;
+
+        xP5 = 390;
+        yP5 = 240;
+    }
 }
 window.setInterval(moverYDibujar, dT);
 
@@ -255,6 +279,9 @@ function controlador() {
     }
     if (x >= 275 && y <= 210 && y >= 150) {
         y = y + 2
+    }
+    if (x >= 510) {
+        x = x - 2;
     }
 }
 
@@ -458,7 +485,7 @@ function dibujarEnemigos(xE, yE) {
 
 function controladorEnemigos() {
     if (Math.sqrt(Math.pow(xC - xE1, 2) + Math.pow(yC - yE1, 2)) <= 20) {
-        x = 90;
+        x = 93;
         y = 60;
         puntos = 0;
         tiempo = 0;
@@ -476,9 +503,13 @@ function controladorEnemigos() {
 
         xP5 = 390;
         yP5 = 240;
+        alert(`Perdiste, ahora vas a volver a la posición de inicio. Intenta no volver chocar.`)
+
+        vX = 0;
+        vY = 0;
     }
     if (Math.sqrt(Math.pow(xC - xE2, 2) + Math.pow(yC - yE2, 2)) <= 20) {
-        x = 90;
+        x = 93;
         y = 60;
         puntos = 0;
         tiempo = 0;
@@ -496,9 +527,12 @@ function controladorEnemigos() {
 
         xP5 = 390;
         yP5 = 240;
+        alert(`Perdiste, ahora vas a volver a la posición de inicio. Intenta no volver chocar.`)
+        vX = 0;
+        vY = 0;
     }
     if (Math.sqrt(Math.pow(xC - xE3, 2) + Math.pow(yC - yE3, 2)) <= 20) {
-        x = 90;
+        x = 93;
         y = 60;
         puntos = 0;
         tiempo = 0;
@@ -516,9 +550,12 @@ function controladorEnemigos() {
 
         xP5 = 390;
         yP5 = 240;
+        alert(`Perdiste, ahora vas a volver a la posición de inicio. Intenta no volver chocar.`)
+        vX = 0;
+        vY = 0;
     }
     if (Math.sqrt(Math.pow(xC - xE4, 2) + Math.pow(yC - yE4, 2)) <= 20) {
-        x = 90;
+        x = 93;
         y = 60;
         puntos = 0;
         tiempo = 0;
@@ -536,9 +573,12 @@ function controladorEnemigos() {
 
         xP5 = 390;
         yP5 = 240;
+        alert(`Perdiste, ahora vas a volver a la posición de inicio. Intenta no volver chocar.`)
+        vX = 0;
+        vY = 0;
     }
     if (Math.sqrt(Math.pow(xC - xE5, 2) + Math.pow(yC - yE5, 2)) <= 20) {
-        x = 90;
+        x = 93;
         y = 60;
         puntos = 0;
         tiempo = 0;
@@ -556,9 +596,12 @@ function controladorEnemigos() {
 
         xP5 = 390;
         yP5 = 240;
+        alert(`Perdiste, ahora vas a volver a la posición de inicio. Intenta no volver chocar.`)
+        vX = 0;
+        vY = 0;
     }
     if (Math.sqrt(Math.pow(xC - xE6, 2) + Math.pow(yC - yE6, 2)) <= 20) {
-        x = 90;
+        x = 93;
         y = 60;
         puntos = 0;
         tiempo = 0;
@@ -576,6 +619,9 @@ function controladorEnemigos() {
 
         xP5 = 390;
         yP5 = 240;
+        alert(`Perdiste, ahora vas a volver a la posición de inicio. Intenta no volver chocar.`)
+        vX = 0;
+        vY = 0;
     }
 }
 
