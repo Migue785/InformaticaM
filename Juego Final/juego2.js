@@ -199,7 +199,7 @@ function moverYDibujar() {
     Score.innerHTML = puntos;
     tempo.innerHTML = tiempo;
 
-    if (puntos == 5 && x >= 510 && y > 210 && y < 325) {
+    if (puntos == 5 && x >= 507 && y > 210 && y < 325) {
         alert(`Ganaste!! Tu tiempo fue de ${tiempo} segundos. Ahora vas a volver a la posición de inicio`)
         puntos = 0;
         tiempo = 0;
@@ -280,7 +280,7 @@ function controlador() {
     if (x >= 275 && y <= 210 && y >= 150) {
         y = y + 2
     }
-    if (x >= 510) {
+    if (x > 515) {
         x = x - 2;
     }
 }
